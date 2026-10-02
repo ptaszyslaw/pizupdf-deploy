@@ -1,0 +1,28 @@
+PizuPDF — OCR (PDF → Word): third-party components
+===================================================
+
+The files in this directory are loaded only when a scanned page is being
+recognized. They are served by the PizuPDF web app itself; no document data
+is sent anywhere.
+
+tesseract.js (worker.min.js)
+  Copyright (c) the tesseract.js authors and contributors
+  License: Apache License 2.0 — see licenses/tesseract.js/LICENSE.md
+  https://github.com/naptha/tesseract.js
+  Libraries bundled in worker.min.js: see licenses/tesseract.js/worker.min.js.LICENSE.txt
+
+tesseract.js-core (core/*.wasm.js)
+  WebAssembly build of Tesseract OCR (https://github.com/tesseract-ocr/tesseract,
+  Apache License 2.0) together with Leptonica (http://www.leptonica.org/,
+  BSD 2-clause style license) and the image libraries listed in the
+  tesseract.js-core repository's third_party folder.
+  License: Apache License 2.0 — see licenses/tesseract.js-core/LICENSE
+  https://github.com/naptha/tesseract.js-core
+
+Language models (lang/pol.traineddata.gz, lang/eng.traineddata.gz)
+  Tesseract "tessdata_best" LSTM models converted to integer precision,
+  from https://github.com/tesseract-ocr/tessdata_best
+  Copyright (c) the Tesseract OCR authors
+  License: Apache License 2.0 (full text: licenses/tesseract.js-core/LICENSE)
+  Repackaged for npm as @tesseract.js-data/pol and @tesseract.js-data/eng
+  (packaging: MIT License, https://github.com/naptha/tessdata)

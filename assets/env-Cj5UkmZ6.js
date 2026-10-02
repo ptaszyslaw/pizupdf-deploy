@@ -1,0 +1,1 @@
+import{n as e}from"./chunk-zsgVPwQN.js";var t,n=e((()=>{t=typeof window<`u`&&!!window.electronAPI&&!window.__pizuPdfWebApi}));export{n,t};
